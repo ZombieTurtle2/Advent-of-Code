@@ -1,4 +1,3 @@
-//Test comment
 //Imports the fs module
 const fs = require("fs");
 
@@ -23,42 +22,49 @@ for (let entry of lines) {
     );
 };
 
-let score = 0;
 const lose = 0;
 const draw = 3;
 const win = 6;
 
-const a = 1;
 const x = 1;
-const b = 2;
 const y = 2;
-const c = 3;
 const z = 3;
-
 
 // rock(a,x) = 1, paper(b,y) = 2, scissors(c,z) = 3, lose = 0, draw = 3, win = 6
 //a,b,c for opponent, x,y,z for you
 
-for (let opponentPick of matches) {
-    if (opponentPick[0] == a) {
-        myPick = x;
-        outcome = 'Lose';
-        points = 4;
-    elseif 
-        //if opponentPick[0] == 'Z' {
-            //LOSE
-            //Reward points
-        //}
-        //else if
-        //else if
-    } else if (match[0] == 'B') {
-        //if
-        //else if
-    } else if (match[0] == 'C') {
-        //if
-        //else if
+let totalScore = 0
+for (let match of matches) {
+    let opponentPick = match[0];
+    let myPick = match[1];
+
+    if (opponentPick == 'A') {
+        if (myPick == 'X') {
+            totalScore = totalScore + draw + x
+        } else if (myPick == "Y") {
+            totalScore = totalScore + win + y
+        } else {
+            totalScore = totalScore + lose + z
+        }
+    } else if (opponentPick == 'B') {
+        if (myPick == 'X') {
+            totalScore = totalScore + lose + x
+        } else if (myPick == "Y") {
+            totalScore = totalScore + draw + y
+        } else {
+            totalScore = totalScore + win + z
+        }
+    } else {
+        if (myPick == 'X') {
+            totalScore = totalScore + win + x
+        } else if (myPick == "Y") {
+            totalScore = totalScore + lose + y
+        } else {
+            totalScore = totalScore + draw + z
+        }
     }
 };
+console.log(totalScore)
 
 //if opponent chooses a
 //  and I choose x
@@ -95,21 +101,5 @@ for (let opponentPick of matches) {
 
 //sum(win+draw+lose) = dayTwoAnswer
 
-//A Y
-//B X
-//C Z
-//A Y\r\nB X\r\nC Z
-
 // rock(a,x) = 1, paper(b,y) = 2, scissors(c,z) = 3, lose = 0, draw = 3, win = 6
 //a,b,c for opponent, x,y,z for you
-
-//let matches = [
-//    [A, Y],
-//    [B, X],
-//    [C, Z]
-//]
-
-//# matches
-//    # your_move, opponent's move
-//    # your_move, opponent's move
-//    # your_move, opponent's move
