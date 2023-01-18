@@ -1,3 +1,4 @@
+//Test comment
 //Imports the fs module
 const fs = require("fs");
 
@@ -33,11 +34,18 @@ const b = 2;
 const y = 2;
 const c = 3;
 const z = 3;
-console.log();
+
+
+// rock(a,x) = 1, paper(b,y) = 2, scissors(c,z) = 3, lose = 0, draw = 3, win = 6
+//a,b,c for opponent, x,y,z for you
 
 for (let opponentPick of matches) {
     if (opponentPick[0] == a) {
-        //if match[2] == 'Z' {
+        myPick = x;
+        outcome = 'Lose';
+        points = 4;
+    elseif 
+        //if opponentPick[0] == 'Z' {
             //LOSE
             //Reward points
         //}
