@@ -25,7 +25,3 @@ while(i < lines.length) {
     i = i + 3;
 }
 console.log(total)
-// [x] remove left/right slice. probably need to change left/right slice to slice on every third line
-// [x] group input.txt into groupings of 3
-// [] find the common character between each grouping of 3 (keep but modify lines 20 and 21)
-// [] sum priorities
